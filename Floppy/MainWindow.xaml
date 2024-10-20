@@ -1,0 +1,38 @@
+﻿<Window x:Class="Floppy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Floppy"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Title="FloppyKnight" Height="513" Width="525" FocusManager.FocusedElement="{Binding ElementName=myCanvas}" KeyDown="Canvas_KeyIsDown" KeyUp="Canvas_KeyIsUp" Icon="/flappyBird.png">
+    <Canvas Name="MyCanvas" Focusable="True" Background="LightBlue">
+        <Image Height="498" Width="1569" Source="/BackgroundCut.jpg" Canvas.Top="0" Canvas.Left="0" Tag="backgroundCity" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Image Height="800" Tag="backgroundOut" Canvas.Left="1569" Source="/backgroundOutside.png" Stretch="Fill" Width="1440" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Image Height="145" Width="207" Source="/clouds.png" Canvas.Left="20" Canvas.Top="10" Tag="clouds"/>
+        <Image Height="145" Width="207" Source="/clouds2.png" Canvas.Left="300" Canvas.Top="96" Tag="clouds"/>
+        <Image Height="389" Width="75" Source="/wall.png"  Canvas.Left="107" Canvas.Top="283" Tag="obs1"/>
+        <Image Height="387" Width="66" Source="/wall.png" Canvas.Left="107" Canvas.Top="-254" Tag="obs1"/>
+        <Image Height="389" Width="75" Source="/wall.png"  Canvas.Left="280" Canvas.Top="327" Tag="obs2"/>
+        <Image Height="387" Width="66" Source="/wall.png" Canvas.Left="280" Canvas.Top="-182" Tag="obs2"/>
+        <Image Height="389" Width="75" Source="/wall.png"  Canvas.Left="451" Canvas.Top="224" Tag="obs3"/>
+        <Image Height="387" Width="66" Source="/wall.png" Canvas.Left="451" Canvas.Top="-291" Tag="obs3"/>
+        <Image Height="50" Width="50" Source="/gold.png" Canvas.Left="115" Canvas.Top="178" Tag="obj1"/>
+        <Image Height="50" Width="50" Source="/gold.png" Canvas.Left="286" Canvas.Top="247" Tag="obj2"/>
+        <Image Height="50" Width="50" Source="/gold.png" Canvas.Left="464" Canvas.Top="137" Tag="obj3"/>
+        <Rectangle x:Name="LifeBox" Fill="White" Height="50" Width="98" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="203"/>
+        <Rectangle Height="50" Stroke="Black" Width="99" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="203"/>
+        <Rectangle x:Name="ScoreBox" Fill="White" Height="50" Width="200" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="155" Canvas.Top="432"/>
+        <Rectangle Height="50" Canvas.Left="155" Stroke="Black" Canvas.Top="432" Width="101" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Rectangle Height="50" Canvas.Left="255" Stroke="Black" Canvas.Top="432" Width="101" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label x:Name="scoreText" FontSize="20" Content=": 0" HorizontalAlignment="Left" Canvas.Left="195" VerticalAlignment="Center" Width="58" Canvas.Top="436" Height="41" />
+        <Label x:Name="distText" FontSize="20" Content=": 0" Canvas.Left="293" Width="62" Canvas.Top="437" HorizontalAlignment="Left" VerticalAlignment="Center" Height="41" />
+        <Label x:Name="healthText" FontSize="20" Content=": 0" Canvas.Left="236" Canvas.Top="5" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="38"/>
+        <Image Height="40" Width="60" Source="/gold.png" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="148" Canvas.Top="437"/>
+        <Image Height="52" Source="/flyIcon.png" Stretch="Fill" Canvas.Top="429" Width="54" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="251"/>
+        <Image Stretch="Fill" Name="flappyBird" Height="46" Width="50" Source="\BirdUp.png" Canvas.Left="20" Canvas.Top="174" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Image x:Name="goText" Height="507" Source="/GOText.png" Stretch="Fill" Canvas.Top="-6" Width="520" HorizontalAlignment="Left" Canvas.Left="-8" VerticalAlignment="Center" Visibility="Hidden"/>
+        <Image x:Name="Health"  Height="24" Canvas.Left="212" Source="/ac4b49b96bd881ec0390f346db0f44fe.png" Stretch="Fill" Width="24" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="13"/>
+    </Canvas>
+</Window>
